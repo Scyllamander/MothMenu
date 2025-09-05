@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food Menu Board</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="menu-board">
+        <!-- Header -->
+        <header class="menu-header">
+            <h1 class="restaurant-name" contenteditable="true">BURGER</h1>
+            <div class="header-subtitle">
+                <span contenteditable="true">COMBO SPECIALS</span>
+            </div>
+        </header>
+
+        <!-- Main Menu Grid -->
+        <div class="menu-grid">
+            <!-- Left Column -->
+            <div class="menu-column left-column">
+                <!-- Burger + Pepsi Panel -->
+                <div class="menu-panel green-panel">
+                    <div class="panel-image">
+                        <div class="food-placeholder">🍔🥤</div>
+                    </div>
+                    <div class="panel-content">
+                        <h3 class="panel-title" contenteditable="true">BURGER + PEPSI</h3>
+                        <div class="panel-price" contenteditable="true">$14.99</div>
+                    </div>
+                    <button class="delete-panel" onclick="deletePanel(this)">×</button>
+                </div>
+
+                <!-- 2 Burgers + 2 Pepsi Panel -->
+                <div class="menu-panel blue-panel">
+                    <div class="panel-image">
+                        <div class="food-placeholder">🍔🍔🥤🥤</div>
+                    </div>
+                    <div class="panel-content">
+                        <h3 class="panel-title" contenteditable="true">2 BURGERS<br>+ 2 PEPSI</h3>
+                        <div class="panel-price" contenteditable="true">$39.99</div>
+                    </div>
+                    <button class="delete-panel" onclick="deletePanel(this)">×</button>
+                </div>
+
+                <!-- Burger + Shake + Rings Panel -->
+                <div class="menu-panel yellow-panel">
+                    <div class="panel-image">
+                        <div class="food-placeholder">🍔🥤🍩</div>
+                    </div>
+                    <div class="panel-content">
+                        <h3 class="panel-title" contenteditable="true">BURGER + SHAKE<br>+ FIERY RINGS</h3>
+                        <div class="panel-price" contenteditable="true">$11.99</div>
+                    </div>
+                    <button class="delete-panel" onclick="deletePanel(this)">×</button>
+                </div>
+            </div>
+
+            <!-- Center Featured Panel -->
+            <div class="featured-panel">
+                <div class="featured-content">
+                    <div class="featured-image">
+                        <div class="food-placeholder large">🍔🍟🥤</div>
+                    </div>
+                    <div class="featured-info">
+                        <div class="featured-price" contenteditable="true">$29.99</div>
+                    </div>
+                </div>
+                <button class="delete-panel" onclick="deletePanel(this)">×</button>
+            </div>
+
+            <!-- Right Column -->
+            <div class="menu-column right-column">
+                <!-- 3 Burgers Panel -->
+                <div class="menu-panel beige-panel">
+                    <div class="panel-image">
+                        <div class="food-placeholder">🍔🍔🍔</div>
+                    </div>
+                    <div class="panel-content">
+                        <h3 class="panel-title" contenteditable="true">3 BURGERS</h3>
+                        <div class="panel-price" contenteditable="true">$29.99</div>
+                    </div>
+                    <button class="delete-panel" onclick="deletePanel(this)">×</button>
+                </div>
+
+                <!-- Salmon Burger Panel -->
+                <div class="menu-panel white-panel">
+                    <div class="panel-image">
+                        <div class="food-placeholder">🍔</div>
+                    </div>
+                    <div class="panel-content">
+                        <h3 class="panel-title" contenteditable="true">SALMON BURGER</h3>
+                        <div class="panel-price" contenteditable="true">$8.99</div>
+                    </div>
+                    <button class="delete-panel" onclick="deletePanel(this)">×</button>
+                </div>
+
+                <!-- Burger + Pepsi + Strips Panel -->
+                <div class="menu-panel pink-panel">
+                    <div class="panel-image">
+                        <div class="food-placeholder">🍔🥤🍗</div>
+                    </div>
+                    <div class="panel-content">
+                        <h3 class="panel-title" contenteditable="true">BURGER + FLOAT PEPSI<br>VEGGIE STRIPS</h3>
+                        <div class="panel-price" contenteditable="true">$29.99</div>
+                    </div>
+                    <button class="delete-panel" onclick="deletePanel(this)">×</button>
+                </div>
+
+                <!-- Chicken Burger Panel -->
+                <div class="menu-panel yellow-panel">
+                    <div class="panel-image">
+                        <div class="food-placeholder">🍗</div>
+                    </div>
+                    <div class="panel-content">
+                        <h3 class="panel-title" contenteditable="true">CHICKEN BURGER</h3>
+                        <div class="panel-price" contenteditable="true">$10.99</div>
+                    </div>
+                    <button class="delete-panel" onclick="deletePanel(this)">×</button>
+                </div>
+
+                <!-- Burger + Shake Panel -->
+                <div class="menu-panel brown-panel">
+                    <div class="panel-image">
+                        <div class="food-placeholder">🍔🥤</div>
+                    </div>
+                    <div class="panel-content">
+                        <h3 class="panel-title" contenteditable="true">BURGER + SHAKE</h3>
+                        <div class="panel-price" contenteditable="true">$7.99</div>
+                    </div>
+                    <button class="delete-panel" onclick="deletePanel(this)">×</button>
+                </div>
+
+                <!-- Spicy Burger Panel -->
+                <div class="menu-panel gray-panel">
+                    <div class="panel-image">
+                        <div class="food-placeholder">🌶️🍔</div>
+                    </div>
+                    <div class="panel-content">
+                        <h3 class="panel-title" contenteditable="true">SPICY BURGER</h3>
+                        <div class="panel-price" contenteditable="true">$12.89</div>
+                    </div>
+                    <button class="delete-panel" onclick="deletePanel(this)">×</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Controls -->
+        <footer class="menu-footer">
+            <div class="controls">
+                <button class="control-btn" onclick="toggleFullscreen()">📺 Fullscreen</button>
+                <button class="control-btn" onclick="toggleEditMode()">🖊️ Edit Mode</button>
+                <button class="control-btn" onclick="addPanel()">➕ Add Panel</button>
+                <button class="control-btn" onclick="exportMenu()">💾 Export</button>
+                <button class="control-btn" onclick="importMenu()">📂 Import</button>
+                <input type="file" id="fileInput" accept=".json" style="display: none;" onchange="handleFileImport(event)">
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
